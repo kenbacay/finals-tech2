@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('tech2_users', function (Blueprint $table) {
             $table->id();
             $table->string('username')->unique();
             $table->string('full_name');
@@ -26,7 +26,7 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tech2_users');
         Schema::dropIfExists('customers');
     }
 };
